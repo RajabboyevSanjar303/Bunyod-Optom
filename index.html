@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Premium e-commerce marketplace demo built with HTML, CSS and Vanilla JS" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Bunyod Market — Modern Marketplace</title>
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="topbar">
+                <div class="container topbar-inner">
+                    <div class="brand">
+                        <a href="#/" class="logo"><img src="image/logo.svg" alt="Bunyod Market" onerror="this.style.display='none'">Bunyod</a>
+                    </div>
+                    <div class="search">
+                        <input id="searchInput" type="search" placeholder="Search products, brands and categories..." autocomplete="off">
+                        <button id="searchBtn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <div id="searchSuggestions" class="search-suggestions hidden"></div>
+                    </div>
+                    <div class="header-actions">
+                        <button id="themeToggle" class="icon-btn" title="
+                        Toggle theme"><i class="fa-solid fa-moon"></i></button>
+                        <button id="wishlistBtn" class="icon-btn" data-route="#/wishlist" title="Wishlist"><i class="fa-regular fa-heart"></i><span class="badge" id="wishCount">0</span></button>
+                        <button id="cartBtn" class="icon-btn" data-route="#/cart" title="Cart"><i class="fa-solid fa-basket-shopping"></i><span class="badge" id="cartCount">0</span></button>
+                        <div class="profile">
+                            <button id="profileBtn" class="profile-btn">Sign in</button>
+                            <div id="profileMenu" class="profile-menu hidden">
+                                <a href="#/profile">Profile</a>
+                                <a href="#/orders">Orders</a>
+                                <a href="#/login">Login</a>
+                                <a href="#/register">Register</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <div class="container nav-inner">
+                    <ul class="categories" id="categoriesList"></ul>
+                    <ul class="nav-links">
+                        <li><a href="#/">Home</a></li>
+                        <li><a href="#/categories">Categories</a></li>
+                        <li><a href="#/about">About</a></li>
+                        <li><a href="#/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main id="app" class="container app-root">
+            <!-- SPA content will be rendered here -->
+            <div id="loader" class="loader centered">Loading…</div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container footer-grid">
+                <div>
+                    <h3>Bunyod Market</h3>
+                    <p>Premium demo marketplace built with HTML, CSS and Vanilla JavaScript.</p>
+                </div>
+                <div>
+                    <h4>Categories</h4>
+                    <ul class="footer-list" id="footerCats"></ul>
+                </div>
+                <div>
+                    <h4>Support</h4>
+                    <ul class="footer-list">
+                        <li><a href="#/contact">Contact</a></li>
+                        <li><a href="#/about">About</a></li>
+                        <li><a href="#/faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Newsletter</h4>
+                    <form id="newsletterForm" class="newsletter">
+                        <input type="email" placeholder="Email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <div class="socials">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="container copyright">© <span id="year"></span> Bunyod Market — All rights reserved.</div>
+        </footer>
+
+        <script src="js/app.js" defer></script>
+    </body>
+</html>
